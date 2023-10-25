@@ -38,8 +38,16 @@ perc_heads = st.number_input(label='Chance of Coins Landing on Heads',
                              min_value=0.0, max_value=1.0,
                              value=.5)
 graph_title = 'Histogram of a thousand coin flips'
-# 4. https://docs.streamlit.io/library/api-reference/widgets
-# 5. เพ่ิม header, subhead ด้วย
+
+# Fixed 4. https://docs.streamlit.io/library/api-reference/widgets
+
+value = st.slider('Chance of Coins Landing on Heads',min_value=0.0, max_value=1.0, value = perc_heads)
+
+# Fixed 5. เพ่ิม header, subhead ด้วย
+st.header('An Illustration of Central Limit Theorem')
+st.subheader('This app simulates a thousand coin flips using the chance of heads input below'
+             'and then samples with replacement from that population and plots the histogram of the'
+             'means of the samples in order to illustrate the central limit theorem!')
 # An Illustration of Central Limit Theorem
 # This app simulates a thousand coin flips using the chance of heads input below,
 # and then samples with replacement from that population and plots the histogram of the
