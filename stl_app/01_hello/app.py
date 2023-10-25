@@ -41,7 +41,8 @@ graph_title = 'Histogram of a thousand coin flips'
 
 # Fixed 4. https://docs.streamlit.io/library/api-reference/widgets
 
-value = st.slider('Chance of Coins Landing on Heads',min_value=0.0, max_value=1.0, value = perc_heads)
+value = st.slider('Chance of Coins Landing on Heads', min_value=0.0, max_value=1.0, value=perc_heads, disabled=True
+                  )
 
 # Fixed 5. เพ่ิม header, subhead ด้วย
 st.header('An Illustration of Central Limit Theorem')
