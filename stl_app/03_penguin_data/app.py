@@ -31,7 +31,7 @@ else:
     st.stop()
 
 st.subheader('ข้อมูลตัวอย่าง')
-# st.write(penguins_df)
+st.write(penguins_df)
 
 st.subheader('แสดงผลข้อมูล')
 sns.set_style('darkgrid')
