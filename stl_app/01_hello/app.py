@@ -54,7 +54,7 @@ for i in range(0, 1000):
         np.random.choice(binom_dist, 100, replace=True).mean())
 
 fig1, ax1 = plt.subplots()
-ax1 = plt.hist(list_of_means, range=(0, 1))
+ax1 = plt.hist(list_of_means, range=(0, 1), bins = 20)
 ax1 = plt.title('ป้อนค่าอะไรลงไปดี')
 # FIXED 2. how to setup limit of x-axis value to 0.0 - 1.0?
 # 3. how to setup more bins, like 20 or 40?
