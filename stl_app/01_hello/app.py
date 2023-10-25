@@ -47,17 +47,17 @@ graph_title = 'Histogram of a thousand coin flips'
 # https://docs.streamlit.io/library/api-reference/text
 
 binom_dist = np.random.binomial(1, perc_heads, 1000)
-# 1. where to replace `perc_heads`?
+# FIXED 1. where to replace `perc_heads`?
 list_of_means = []
 for i in range(0, 1000):
     list_of_means.append(
         np.random.choice(binom_dist, 100, replace=True).mean())
 
 fig1, ax1 = plt.subplots()
-ax1 = plt.hist(list_of_means)
+ax1 = plt.hist(list_of_means, range=(0, 1))
 ax1 = plt.title('ป้อนค่าอะไรลงไปดี')
-# 2. how to setup limit of x-axis value to 0.0 - 1.0?
+# FIXED 2. how to setup limit of x-axis value to 0.0 - 1.0?
 # 3. how to setup more bins, like 20 or 40?
 st.pyplot(fig1)
 
-#%%
+# %%
