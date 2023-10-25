@@ -3,20 +3,23 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# st.title("Palmer's Penguins")
-# st.markdown('สร้าง `scatter plot` แสดงผลข้อมูล **Palmer\'s Penguins** กัน แบบเดียวกับ **Iris dataset**')
-#
-# choices = ['bill_length_mm',
-#            'bill_depth_mm',
-#            'flipper_length_mm',
-#            'body_mass_g']
-#
-# # https://docs.streamlit.io/library/api-reference/widgets/st.selectbox
-# # 1. สร้าง st.selectbox ของ ตัวเลือก แกน x และ y จาก choices
-# selected_x_var = 'อะไรดี'
-# selected_y_var = 'อะไรดี'
-#
-# # https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader
+st.title("Palmer's Penguins")
+st.markdown('สร้าง `scatter plot` แสดงผลข้อมูล '
+            '**Palmer\'s Penguins** กัน'
+            ' แบบเดียวกับ **Iris dataset**')
+
+choices = ['bill_length_mm',
+           'bill_depth_mm',
+           'flipper_length_mm',
+           'body_mass_g']
+
+#https://docs.streamlit.io/library/api-reference/widgets/st.selectbox
+# 1. สร้าง st.selectbox ของ ตัวเลือก แกน x และ y จาก choices
+selected_x_var = st.selectbox(
+    'Choose x-coordinate would you like to ? ',choices)
+selected_y_var = st.selectbox(
+    'Choose y-coordinate would you like to ? ',choices)
+# https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader
 # # 2. สร้าง st.file_uploader เพื่อให้เลือกไฟล์ .csv เท่านั้น จากเครื่องผู้ใช้งาน
 # penguin_file = None
 #
